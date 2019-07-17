@@ -17,3 +17,5 @@
 
 - Scan with vulscan 
 ##### nmap --script vulscan -sV -p# ###.###.###.###
+
+##### nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p# ###.###.###.###
