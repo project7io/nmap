@@ -1,5 +1,5 @@
 #### nmap
- Project7 nmap notes -- Best viewed as a Gitpage  https://project7io.github.io/nmap/
+ Project7 nmap notes -- Best viewed as a GitHub page  https://project7io.github.io/nmap/
 
 #### Install NSE scripts to detect vulnerabilities
 
