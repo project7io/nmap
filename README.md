@@ -11,4 +11,9 @@
 
 - Update vulscan database
 ##### cd vulscan/utilities/updater/ && chmod +x updateFiles.sh && ./updateFiles.sh
-##### 
+
+- Scan with nmap-vunlers
+##### nmap --script nmap-vulners -sV -p# ###.###.###.###
+
+- Scan with vulscan 
+##### nmap --script vulscan -sV -p# ###.###.###.###
