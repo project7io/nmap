@@ -18,4 +18,8 @@
 - Scan with vulscan 
 `nmap --script vulscan -sV -p# ###.###.###.###`
 
-`nmap --script nmap-vulners`vulscan --script-args vulscandb=scipvuldb.csv -sV -p# ###.###.###.###`
+--Combine both scripts to one scan and scan ALL ports
+`nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p- ###.###.###.###`
+
+--Host discovery via smb
+nmap -p 445 --script smb-os-discovery 192.168.1.0/24
