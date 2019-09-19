@@ -3,19 +3,12 @@
 
 #### Install NSE scripts to detect vulnerabilities
 
-- Change directory to nmap scripts folder
-'cd /usr/share/nmap/scripts/'
+'cd /usr/share/nmap/scripts/ && git clone https://github.com/vulnersCom/nmap-vulners.git && git clone https://github.com/scipag/vulscan.git && cd /usr/share/nmap/scripts/vulscan/utilities/updater && chmod +x updateFiles.sh && ./updateFiles.sh'
 
-- Install/clone scripts
-'git clone https://github.com/vulnersCom/nmap-vulners.git && git clone https://github.com/scipag/vulscan.git'
-
-- Update vulscan database
-'cd vulscan/utilities/updater/ && chmod +x updateFiles.sh && ./updateFiles.sh'
-
-- Scan with nmap-vunlers
+Scan with nmap-vunlers
 'nmap --script nmap-vulners -sV -p# ###.###.###.###'
 
-- Scan with vulscan 
+Scan with vulscan 
 `nmap --script vulscan -sV -p# ###.###.###.###`
 
 --Combine both scripts to one scan and scan ALL ports
