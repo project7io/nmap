@@ -14,9 +14,16 @@ Scan with vulscan
 ### Combine both scripts to one scan and scan ALL ports
 `nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p- ###.###.###.###`
 
-### Host discovery via smb
-`nmap -p 445 --script smb-os-discovery 192.168.1.0/24`
+### Eternal Blue
+`nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
 
+### Bluekeep scan
+`msfconsole`
+`search bluekeep`
+`use auxiliary/scanner/rdp/cve_2019_0708_bluekeep`
+`set RHOSTS 192.168.1.0/24`
+`show options`
+`run`
 
 ### Formatting
 `wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
