@@ -18,7 +18,10 @@ Scan with vulscan
 `nmap -p 445 --script smb-os-discovery 192.168.1.0/24`
 
 
-## Formatting
+### Formatting
 `wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
 
 `nmap -sS -T4 -A -sC -oA nmapScan --stylesheet nmap-bootstrap.xsl 192.168.0.1`
+
+Then XML to HTML
+`xsltproc -o nmapScan.html nmap-bootstrap.xsl nmapScan.xml`
