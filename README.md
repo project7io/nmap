@@ -30,5 +30,5 @@ Scan with vulscan
 
 `nmap -sS -T4 -A -sC -oA nmapScan --stylesheet nmap-bootstrap.xsl 192.168.0.1`
 
-Then XML to HTML
+- Then XML to HTML
 `xsltproc -o nmapScan.html nmap-bootstrap.xsl nmapScan.xml`
