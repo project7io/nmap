@@ -1,14 +1,14 @@
 ### nmap
  Project7 nmap notes -- Best viewed as a GitHub page  https://project7io.github.io/nmap/
 
-### Install NSE scripts to detect vulnerabilities
+### Install nmap-vulners NSE scripts to quickly detect vulnerabilities
 
-`cd /usr/share/nmap/scripts/ && git clone https://github.com/vulnersCom/nmap-vulners.git && git clone https://github.com/scipag/vulscan.git && cd /usr/share/nmap/scripts/vulscan/utilities/updater && chmod +x updateFiles.sh && ./updateFiles.sh`
+`cd && git clone https://github.com/vulnersCom/nmap-vulners.git`
 
-Scan with nmap-vunlers
+##### Scan with nmap-vunlers
 `nmap --script nmap-vulners -sV -p# ###.###.###.###`
 
-#### Example results:
+##### Example results:
 ```Nmap scan report for 10.0.2.7/r
 Host is up (0.00050s latency).
 Not shown: 999 filtered ports
@@ -24,11 +24,6 @@ PORT   STATE SERVICE VERSION
 MAC Address: 08:00:27:10:B8:D0 (Oracle VirtualBox virtual NIC)
 ```
 
-Scan with vulscan 
-`nmap --script vulscan -sV -p# ###.###.###.###`
-
-### Combine both scripts to one scan and scan ALL ports
-`nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p- ###.###.###.###`
 
 ### Eternal Blue
 `nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
