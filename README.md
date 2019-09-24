@@ -9,6 +9,7 @@ Scan with nmap-vunlers
 `nmap --script nmap-vulners -sV -p# ###.###.###.###`
 #### Example results:
 `Nmap scan report for 10.0.2.7
+
 Host is up (0.00050s latency).
 Not shown: 999 filtered ports
 PORT   STATE SERVICE VERSION
