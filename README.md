@@ -1,6 +1,15 @@
 ### nmap
  Project7 nmap notes -- Best viewed as a GitHub page  https://project7io.github.io/nmap/
 
+###### Formatting - Make your nmap scans more readable.
+Download the nmap stylesheet.
+`wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
+Use the nmap stylesheet in your nmap scan. Use -oX to output to XML which is needed for the styelsheet.
+`nmap -sS -T4 -A -sC -oX nmapScan.xml --stylesheet nmap-bootstrap.xsl 192.168.0.1`
+
+Optional convert the scan XML to HTML
+`xsltproc -o nmapScan.html nmap-bootstrap.xsl nmapScan.xml`
+
 ### Install nmap-vulners NSE scripts to quickly detect vulnerabilities
 
 `cd && git clone https://github.com/vulnersCom/nmap-vulners.git`
@@ -24,25 +33,20 @@ PORT   STATE SERVICE VERSION
 |_    	CVE-2016-0777	4.0	https://vulners.com/cve/CVE-2016-0777
 MAC Address: 08:00:27:10:B8:D0 (Oracle VirtualBox virtual NIC)
 ```
-##### 
+##### With bootstrap formatting
+`nmap --script nmap-vulners -sV -F -oA nmapScan --stylesheet nmap-bootstrap.xsl 10.0.2.0/24
 
-##### Eternal Blue
+##### nmap Eternal Blue
 `nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
 
-##### Bluekeep scan
+##### nmap Bluekeep scan
 ```
-msfconsole`
-search bluekeep`
-use auxiliary/scanner/rdp/cve_2019_0708_bluekeep`
-set RHOSTS 192.168.1.0/24`
-show options`
+msfconsole
+search bluekeep
+use auxiliary/scanner/rdp/cve_2019_0708_bluekeep
+set RHOSTS 192.168.1.0/24
+show options
 run
 ```
 
-##### Formatting
-`wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
 
-`nmap -sS -T4 -A -sC -oA nmapScan --stylesheet nmap-bootstrap.xsl 192.168.0.1`
-
-- Then XML to HTML
-`xsltproc -o nmapScan.html nmap-bootstrap.xsl nmapScan.xml`
