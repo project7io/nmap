@@ -29,12 +29,13 @@ MAC Address: 08:00:27:10:B8:D0 (Oracle VirtualBox virtual NIC)
 `nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
 
 ##### Bluekeep scan
-`msfconsole`
+```msfconsole`
 `search bluekeep`
 `use auxiliary/scanner/rdp/cve_2019_0708_bluekeep`
 `set RHOSTS 192.168.1.0/24`
 `show options`
-`run`
+`run
+```
 
 ##### Formatting
 `wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
