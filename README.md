@@ -16,7 +16,7 @@ Optional convert the scan XML to HTML
 `cd && git clone https://github.com/vulnersCom/nmap-vulners.git`
 
 ###### Scan with nmap-vunlers
-`nmap --script nmap-vulners -sV -F ###.###.###.###  (-F is for fast scan. -p 0-10000 or define ports`
+`nmap --script nmap-vulners -sV -F ###.###.###.###  (-F is for fast scan. -p 0-10000 or define ports)`
 
 ###### Example results:
 ```
