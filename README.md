@@ -4,6 +4,7 @@
 ###### Formatting - Make your nmap scans more readable.
 Download the nmap stylesheet.
 `wget https://raw.githubusercontent.com/honze-net/nmap-bootstrap-xsl/master/nmap-bootstrap.xsl`
+
 Use the nmap stylesheet in your nmap scan. Use -oX to output to XML which is needed for the styelsheet.
 `nmap -sS -T4 -A -sC -oX nmapScan.xml --stylesheet nmap-bootstrap.xsl 192.168.0.1`
 
