@@ -37,6 +37,9 @@ MAC Address: 08:00:27:10:B8:D0 (Oracle VirtualBox virtual NIC)
 ##### With bootstrap formatting
 `nmap --script nmap-vulners -sV -F -oA nmapScan --stylesheet nmap-bootstrap.xsl 10.0.2.0/24`
 
+##### Detect NetBIOS (PC Name) with nmap
+`nmap -sV --script=rdp-vuln-ms12-020 -p 3389 10.0.0.0
+
 ##### nmap Eternal Blue
 `nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
 
