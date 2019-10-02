@@ -40,7 +40,7 @@ MAC Address: 08:00:27:10:B8:D0 (Oracle VirtualBox virtual NIC)
 ##### nmap Eternal Blue
 `nmap -Pn -p445 --script=smb-vuln-ms17-010 192.168.1.0/24 -oN eternalblue-results.txt`
 
-##### nmap Bluekeep scan
+##### Metasploit Bluekeep scan
 ```
 msfconsole
 search bluekeep
